@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Booking</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.venue {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.venue-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.venue-details {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Venue Booking</h1>
+    </header>
+    <main>
+        <section class="venue">
+            <div class="venue-img">
+                <img src="image1.jpg" alt="Venue 1">
+            </div>
+            <div class="venue-details">
+                <h2>Venue 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac felis ullamcorper.</p>
+                <button onclick="success()">Book Now</button>
+            </div>
+        </section>
+        <section class="venue">
+            <div class="venue-img">
+                <img src="image2.jpg" alt="Venue 2">
+            </div>
+            <div class="venue-details">
+                <h2>Venue 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac felis ullamcorper.</p>
+                <button onclick="success()"> Book Now </button>
+            </div>
+        </section>
+        <section class="venue">
+            <div class="venue-img">
+                <img src="image3.jpg" alt="Venue 2">
+            </div>
+            <div class="venue-details">
+                <h2>Venue 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac felis ullamcorper.</p>
+                <button onclick="success()">Book Now</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Venue Booking</p>
+    </footer>
+
+    <script>
+        function success() 
+        {
+           alert("Booked Successfully...") 
+        }
+        </script>
+
+</body>
+</html>

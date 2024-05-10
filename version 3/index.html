@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Venue Booking System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    /* Your custom styles */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        margin-top: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .footer-buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer-buttons .btn {
+        margin-right: 10px;
+    }
+</style>
+<body>
+
+    <div class="container">
+        <h1>Event Venue Booking System</h1>
+        <form id="bookingForm" action="#" method="post">
+            <label for="planner_name">Your Name</label>
+            <input type="text" id="planner_name" name="planner_name" class="form-control" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+            <br>
+            <label for="event_date">Event Date</label>
+            <input type="date" id="event_date" name="event_date" class="form-control" required>
+            <br>
+            <label for="venue">Select Venue</label>
+            <select id="venue" name="venue" class="form-control" required>
+                <option value="">Select Venue</option>
+                <option value="venue1">Venue 1</option>
+                <option value="venue2">Venue 2</option>
+                <option value="venue3">Venue 3</option>
+            </select>
+            <br>
+            <button type="submit" class="btn btn-primary">Book Venue</button>
+        </form>
+
+        <!-- Footer buttons -->
+        <div class="footer-buttons">
+            <a href="about us.html" class="btn btn-secondary">About Us</a>
+            <a href="contact.html" class="btn btn-secondary">Contact</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            var form = this;
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+
+    </script>
+</body>
+</html>
